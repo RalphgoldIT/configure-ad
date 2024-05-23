@@ -95,8 +95,25 @@
 
 <h2>Install Active Directory</h2>
 <p>Log in to DC-1 and proceed to install Active Directory Domain Services.</p>
+
+![Server manager click on add roles and features](https://github.com/RalphgoldIT/configure-ad/assets/170049429/afe326d0-21f4-4dd5-9192-43771bbb7bf6)
+
+![Active directory domain services](https://github.com/RalphgoldIT/configure-ad/assets/170049429/4e8e1b0d-977a-4e6b-8118-b26c2632a8cd)
+
+![Active Directory domain servces installed](https://github.com/RalphgoldIT/configure-ad/assets/170049429/3d58ce27-33ac-4798-8f6f-a4babd3f6091)
+
 <p>Promote as a DC: Setup a new forest as mydomain.com (can be anything, just remember what it is).</p>
+
+![Promote server to a domain controller](https://github.com/RalphgoldIT/configure-ad/assets/170049429/47a7e51e-a999-4984-aa6e-7b42a8c1a150)
+
+![Domain controler options](https://github.com/RalphgoldIT/configure-ad/assets/170049429/ff03c6fc-723a-47b3-9c9c-2264f5c4ea92)
+
+![Additional Options](https://github.com/RalphgoldIT/configure-ad/assets/170049429/c27eeb72-188b-4f4a-9eb7-2bb5f69aceff)
+
+![Prerequiistite check](https://github.com/RalphgoldIT/configure-ad/assets/170049429/eea991d0-74dc-4622-8140-9ba9a4687fa7)
+
 <p>Restart and then log back into DC-1 as user: mydomain.com\labuser.</p>
+
 
 <h2>Create an Admin and Normal User Account in AD</h2>
 <p>In Active Directory Users and Computers (ADUC), create an Organizational Unit (OU) called “_EMPLOYEES”.</p>
