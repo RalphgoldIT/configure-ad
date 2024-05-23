@@ -76,9 +76,22 @@
 
 ![Faileed perpetual ping for client 1](https://github.com/RalphgoldIT/configure-ad/assets/170049429/aed9f643-753b-4f41-9cc2-d03e5bf1cbe7)
 
-
 <p>Log in to the Domain Controller and enable ICMPv4 in the local Windows Firewall settings.</p>
+
+![Screenshot 2024-05-23 162633](https://github.com/RalphgoldIT/configure-ad/assets/170049429/8834380d-ba42-4110-8e5b-2c863d19ff1e)
+
+![Screenshot 2024-05-23 162750](https://github.com/RalphgoldIT/configure-ad/assets/170049429/8cdfb3e8-9d5f-451c-9ddc-1009a5a1aea5)
+
+![Screenshot 2024-05-23 162816](https://github.com/RalphgoldIT/configure-ad/assets/170049429/3c50751d-0c50-4438-8a26-f56c83e9712d)
+
+<p>Enable ICMP Echo request (ICMPv4-IN) 1 & 2<p>
+
+![windows firewall](https://github.com/RalphgoldIT/configure-ad/assets/170049429/2c0478b5-0f0a-44e7-88f6-d23bc960b270)
+
 <p>Check back at Client-1 to see the ping succeed.</p>
+
+![logged back in to Clinent 1 and ping DC-1 for connectivity](https://github.com/RalphgoldIT/configure-ad/assets/170049429/32f1d282-4c2e-4962-8616-50c369ccef29)
+
 
 <h2>Install Active Directory</h2>
 <p>Log in to DC-1 and proceed to install Active Directory Domain Services.</p>
