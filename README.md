@@ -37,13 +37,46 @@
 </ol>
 
 <h2>Setup Resources in Azure</h2>
+
 <p>Set up the Domain Controller VM (Windows Server 2022) with the designation "DC-1." Remember to record the Resource Group and Virtual Network (Vnet) generated during this process.</p>
+
+![Screenshot 2024-05-23 152528](https://github.com/RalphgoldIT/configure-ad/assets/170049429/5e915577-53c2-48b1-bb6d-d24e783a666f)
+
+![Screenshot 2024-05-23 152911](https://github.com/RalphgoldIT/configure-ad/assets/170049429/f2682a8d-34ca-44a6-ab45-27e0828341e8)
+
 <p>Configure the Domain Controller's NIC Private IP address to be static.</p>
+
+![Screenshot 2024-05-23 154018](https://github.com/RalphgoldIT/configure-ad/assets/170049429/36701b99-8039-4380-b218-44ca1ec40772)
+
+![Screenshot 2024-05-23 154211](https://github.com/RalphgoldIT/configure-ad/assets/170049429/505c27f6-bc56-4c33-a053-234e79b17208)
+
 <p>Establish the Client VM (Windows 10) named "Client-1," utilizing the identical Resource Group and Vnet generated earlier.</p>
-<p>Confirm that both VMs are within the same Vnet. (You can verify this by examining the network topology using Network Watcher.)</p>
+
+![Screenshot 2024-05-23 153209](https://github.com/RalphgoldIT/configure-ad/assets/170049429/93e642fa-d96a-41a4-9884-ff776c7db9f1)
+
+<p>Confirm that both VMs are within the same Vnet.</p>
+
+![Screenshot 2024-05-23 153600](https://github.com/RalphgoldIT/configure-ad/assets/170049429/0ff16f7a-fe81-415e-8829-1e78b9999ad3)
+
 
 <h2>Ensure Connectivity between the client and Domain Controller</h2>
 <p>Log in to Client-1 via Remote Desktop and initiate a continuous ping to DC-1's private IP address using the command: ping -t &lt;ip address&gt;.</p>
+
+<p>Copy client-1 Public IP Address to Login on remote desktop.</p>
+
+![client 1 public adddress](https://github.com/RalphgoldIT/configure-ad/assets/170049429/7fe50396-5d03-4767-a214-ea6ff201c8eb)
+
+![RDP for  Client 1](https://github.com/RalphgoldIT/configure-ad/assets/170049429/17f71261-67bb-4e2f-83a9-79081b765531)
+
+![RDP login to client 1](https://github.com/RalphgoldIT/configure-ad/assets/170049429/18f5935f-c3ff-43c9-b1e1-b353eda3e617)
+
+<p>Ping DC-1 private IP Address<p>
+ 
+![DC-1 private ip address](https://github.com/RalphgoldIT/configure-ad/assets/170049429/21fdf64e-3647-4563-8dcf-59536e18ff70)
+
+![Faileed perpetual ping for client 1](https://github.com/RalphgoldIT/configure-ad/assets/170049429/aed9f643-753b-4f41-9cc2-d03e5bf1cbe7)
+
+
 <p>Log in to the Domain Controller and enable ICMPv4 in the local Windows Firewall settings.</p>
 <p>Check back at Client-1 to see the ping succeed.</p>
 
