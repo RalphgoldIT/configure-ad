@@ -33,7 +33,6 @@
   <li>Install Active Directory</li>
   <li>Create an Admin and Normal User Account in AD</li>
   <li>Join Client-1 to your domain (mydomain.com)</li>
-  <li>Setup Remote Desktop for non-administrative users on Client-1</li>
 </ol>
 
 <h2>Setup Resources in Azure</h2>
@@ -187,16 +186,6 @@
 
 
 
-<p>Login to the Domain Controller (Remote Desktop) and verify Client-1 shows up in Active Directory Users and Computers (ADUC) inside the “Computers” container on the root of the domain.</p>
-<p>Create a new Organizational Unit (OU) named "_CLIENTS" and relocate Client-1 into it.</p>
-
-<h2>Setup Remote Desktop for non-administrative users on Client-1</h2>
-
-<p>Log in to Client-1 using the credentials "mydomain.com\jane_admin" and proceed to open the system properties.</p>
-<p>Click “Remote Desktop”.</p>
-<p>Allow “domain users” access to remote desktop.</p>
-<p>You are now able to log in to Client-1 as a regular, non-administrative user.</p>
-<p>Leveraging Group Policy is an efficient method for implementing changes across multiple systems simultaneously, ensuring consistency and streamlining administrative tasks.</p>
 
 </body>
 </html>
