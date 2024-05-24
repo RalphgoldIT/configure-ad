@@ -102,7 +102,7 @@
 
 ![Active Directory domain servces installed](https://github.com/RalphgoldIT/configure-ad/assets/170049429/3d58ce27-33ac-4798-8f6f-a4babd3f6091)
 
-<p>Promote as a DC: Setup a new forest as mydomain.com (can be anything, just remember what it is).</p>
+<p>Promote as a DC: Setup a new forest as mydomain.com</p>
 
 ![Promote server to a domain controller](https://github.com/RalphgoldIT/configure-ad/assets/170049429/47a7e51e-a999-4984-aa6e-7b42a8c1a150)
 
@@ -116,24 +116,86 @@
 
 
 <h2>Create an Admin and Normal User Account in AD</h2>
-<p>In Active Directory Users and Computers (ADUC), create an Organizational Unit (OU) called “_EMPLOYEES”.</p>
-<p>Create a new OU named “_ADMINS”.</p>
+
+<p>In Active Directory Users and Computers (ADUC), create an Organizational Unit (OU) called “_EMPLOYEES” and "_ADMINS".</p>
+
+![Created new Organization units Employees and admins](https://github.com/RalphgoldIT/configure-ad/assets/170049429/f3b60561-769a-49c8-aa64-dbde236babe5)
+
 <p>Create a new employee named “Jane Doe” (same password) with the username of “jane_admin”.</p>
+
+![Created new user jane doe](https://github.com/RalphgoldIT/configure-ad/assets/170049429/1d3817f7-6879-444f-a5c7-1f96afc020d3)
+
+![Password for user account jane doe](https://github.com/RalphgoldIT/configure-ad/assets/170049429/2cd85aa2-a36c-4b3d-9eef-184e2c03cbeb)
+
+
 <p>Add jane_admin to the “Domain Admins” Security Group.</p>
+
+![Add jane doe to a group](https://github.com/RalphgoldIT/configure-ad/assets/170049429/c18a57b1-bbc1-44ec-8842-00de603ed3d9)
+
+![add hane to domain admin group](https://github.com/RalphgoldIT/configure-ad/assets/170049429/4783ca1b-7b65-4091-9d08-b52eab9257ce)
+
+![Added jane to domain admin group](https://github.com/RalphgoldIT/configure-ad/assets/170049429/525e4940-e368-4780-95c7-3e913088eca6)
+
 <p>Log out/close the Remote Desktop connection to DC-1 and log back in as “mydomain.com\jane_admin”.</p>
+
+![Logout from DC-1 and login as Jane admin](https://github.com/RalphgoldIT/configure-ad/assets/170049429/659c734a-dc6f-40c0-9053-50dc01998cad)
+
+![Logged back into DC as Jane_admin](https://github.com/RalphgoldIT/configure-ad/assets/170049429/1270793a-1b19-4706-b6b3-092fa6ed81f9)
+
+
 <p>Use jane_admin as your admin account from now on.</p>
 
 <h2>Join Client-1 to your domain (mydomain.com)</h2>
+
 <p>Configure Client-1's DNS settings to use the private IP address of the DC from the Azure Portal.</p>
+
+![DC-1 Private IP Address](https://github.com/RalphgoldIT/configure-ad/assets/170049429/cd2a2c08-edbd-4842-986a-fba515b2a7ef)
+
+![change client 1 NIC](https://github.com/RalphgoldIT/configure-ad/assets/170049429/174fc7aa-e4d3-4803-a9f5-f3bc1e8fa5ad)
+
+![Add DC private ip to Client 1 DNS Server and change the dns server settings from inherit to network](https://github.com/RalphgoldIT/configure-ad/assets/170049429/5f205cfa-70a6-4cfb-8158-6c0987aca84c)
+
 <p>Restart Client-1 from the Azure Portal.</p>
+
+![Restart client 1](https://github.com/RalphgoldIT/configure-ad/assets/170049429/796b1ccd-e6fb-4d1d-9223-7c4db6ad3cbc)
+
 <p>Log in to Client-1 via Remote Desktop using the original local admin credentials (labuser) and proceed to join it to the domain. The computer will automatically restart as part of this process.</p>
+
+![Copy client 1 public address](https://github.com/RalphgoldIT/configure-ad/assets/170049429/53caa5b8-aff4-49a2-802d-fe0a0d04f409)
+
+![Screenshot 2024-05-23 185936](https://github.com/RalphgoldIT/configure-ad/assets/170049429/a26eda98-c0cb-438b-ba41-bd4451ec8437)
+
+![Screenshot 2024-05-23 190031](https://github.com/RalphgoldIT/configure-ad/assets/170049429/79df15ae-4b33-4a92-9c71-a3d6029c8a5a)
+
+
+
 <p>Login to the Domain Controller (Remote Desktop) and verify Client-1 shows up in Active Directory Users and Computers (ADUC) inside the “Computers” container on the root of the domain.</p>
 <p>Create a new Organizational Unit (OU) named "_CLIENTS" and relocate Client-1 into it.</p>
 
 <h2>Setup Remote Desktop for non-administrative users on Client-1</h2>
 <p>Log in to Client-1 using the credentials "mydomain.com\jane_admin" and proceed to open the system properties.</p>
+
+![Screenshot 2024-05-23 200620](https://github.com/RalphgoldIT/configure-ad/assets/170049429/0b33bdd0-0328-4669-a8ce-06ab728ac22e)
+
+![Screenshot 2024-05-23 200555](https://github.com/RalphgoldIT/configure-ad/assets/170049429/6d13e599-42bd-4261-acf8-ac85a4523a6a)
+
+![Logged back into DC as Jane_admin](https://github.com/RalphgoldIT/configure-ad/assets/170049429/c35ccbf9-3856-4b0a-ba3a-d6e476d5f324)
+
+
+
 <p>Click “Remote Desktop”.</p>
+
+![go to remote desktop](https://github.com/RalphgoldIT/configure-ad/assets/170049429/da96070c-f74c-4a24-ba78-b2ffd40478cb)
+
 <p>Allow “domain users” access to remote desktop.</p>
+
+![Add desktop users](https://github.com/RalphgoldIT/configure-ad/assets/170049429/c17a69dd-971b-42a6-b614-f2252c5a2e20)
+
+![Add domain Users and click ok](https://github.com/RalphgoldIT/configure-ad/assets/170049429/52ea61c8-af9f-4918-bdb8-e0e4a4e6dc39)
+
+![checking users](https://github.com/RalphgoldIT/configure-ad/assets/170049429/dca74dff-e4a8-43be-aea4-6b57eee4b9f3)
+
+
 <p>You are now able to log in to Client-1 as a regular, non-administrative user.</p>
 
 <p>Leveraging Group Policy is an efficient method for implementing changes across multiple systems simultaneously, ensuring consistency and streamlining administrative tasks.</p>
