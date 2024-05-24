@@ -167,12 +167,16 @@
 
 ![Screenshot 2024-05-23 190031](https://github.com/RalphgoldIT/configure-ad/assets/170049429/79df15ae-4b33-4a92-9c71-a3d6029c8a5a)
 
+![join domain](https://github.com/RalphgoldIT/configure-ad/assets/170049429/3cffaa8c-e6a5-4f44-8217-9aed42849fa8)
+
+![join a domain](https://github.com/RalphgoldIT/configure-ad/assets/170049429/41daad31-b491-4227-9148-b75978e3a8ac)
 
 
 <p>Login to the Domain Controller (Remote Desktop) and verify Client-1 shows up in Active Directory Users and Computers (ADUC) inside the “Computers” container on the root of the domain.</p>
 <p>Create a new Organizational Unit (OU) named "_CLIENTS" and relocate Client-1 into it.</p>
 
 <h2>Setup Remote Desktop for non-administrative users on Client-1</h2>
+
 <p>Log in to Client-1 using the credentials "mydomain.com\jane_admin" and proceed to open the system properties.</p>
 
 ![Screenshot 2024-05-23 200620](https://github.com/RalphgoldIT/configure-ad/assets/170049429/0b33bdd0-0328-4669-a8ce-06ab728ac22e)
@@ -181,13 +185,7 @@
 
 ![Logged back into DC as Jane_admin](https://github.com/RalphgoldIT/configure-ad/assets/170049429/c35ccbf9-3856-4b0a-ba3a-d6e476d5f324)
 
-
-
-<p>Click “Remote Desktop”.</p>
-
 ![go to remote desktop](https://github.com/RalphgoldIT/configure-ad/assets/170049429/da96070c-f74c-4a24-ba78-b2ffd40478cb)
-
-<p>Allow “domain users” access to remote desktop.</p>
 
 ![Add desktop users](https://github.com/RalphgoldIT/configure-ad/assets/170049429/c17a69dd-971b-42a6-b614-f2252c5a2e20)
 
@@ -196,8 +194,9 @@
 ![checking users](https://github.com/RalphgoldIT/configure-ad/assets/170049429/dca74dff-e4a8-43be-aea4-6b57eee4b9f3)
 
 
+<p>Click “Remote Desktop”.</p>
+<p>Allow “domain users” access to remote desktop.</p>
 <p>You are now able to log in to Client-1 as a regular, non-administrative user.</p>
-
 <p>Leveraging Group Policy is an efficient method for implementing changes across multiple systems simultaneously, ensuring consistency and streamlining administrative tasks.</p>
 
 </body>
