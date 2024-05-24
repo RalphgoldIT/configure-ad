@@ -171,14 +171,6 @@
 
 ![join a domain](https://github.com/RalphgoldIT/configure-ad/assets/170049429/41daad31-b491-4227-9148-b75978e3a8ac)
 
-
-<p>Login to the Domain Controller (Remote Desktop) and verify Client-1 shows up in Active Directory Users and Computers (ADUC) inside the “Computers” container on the root of the domain.</p>
-<p>Create a new Organizational Unit (OU) named "_CLIENTS" and relocate Client-1 into it.</p>
-
-<h2>Setup Remote Desktop for non-administrative users on Client-1</h2>
-
-<p>Log in to Client-1 using the credentials "mydomain.com\jane_admin" and proceed to open the system properties.</p>
-
 ![Screenshot 2024-05-23 200620](https://github.com/RalphgoldIT/configure-ad/assets/170049429/0b33bdd0-0328-4669-a8ce-06ab728ac22e)
 
 ![Screenshot 2024-05-23 200555](https://github.com/RalphgoldIT/configure-ad/assets/170049429/6d13e599-42bd-4261-acf8-ac85a4523a6a)
@@ -194,6 +186,13 @@
 ![checking users](https://github.com/RalphgoldIT/configure-ad/assets/170049429/dca74dff-e4a8-43be-aea4-6b57eee4b9f3)
 
 
+
+<p>Login to the Domain Controller (Remote Desktop) and verify Client-1 shows up in Active Directory Users and Computers (ADUC) inside the “Computers” container on the root of the domain.</p>
+<p>Create a new Organizational Unit (OU) named "_CLIENTS" and relocate Client-1 into it.</p>
+
+<h2>Setup Remote Desktop for non-administrative users on Client-1</h2>
+
+<p>Log in to Client-1 using the credentials "mydomain.com\jane_admin" and proceed to open the system properties.</p>
 <p>Click “Remote Desktop”.</p>
 <p>Allow “domain users” access to remote desktop.</p>
 <p>You are now able to log in to Client-1 as a regular, non-administrative user.</p>
